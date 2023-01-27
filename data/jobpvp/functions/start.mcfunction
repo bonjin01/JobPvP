@@ -6,7 +6,7 @@
 
 # $MaxLifeから残機取得
     execute unless score $MaxLife Global matches -2147483648..2147483647 run scoreboard players set $MaxLife Global 1
-    scoreboard players operation @a life = $MaxLife Global
+    scoreboard players operation @a Life = $MaxLife Global
 
 # spectatorタグがついてる人をspectatorモードに
     gamemode spectator @a[tag=spectator]
