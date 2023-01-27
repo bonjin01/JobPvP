@@ -12,4 +12,6 @@ execute if score $Countdown Global matches 1.. run schedule function jobpvp:maps
 
 execute if score $Countdown Global matches ..0 run tellraw @a [{"text": "スタート！"}]
 execute if score $Countdown Global matches ..0 run playsound entity.ender_dragon.ambient player @a ~ ~ ~ 1 2 1
+# UtilityItems の使用許可を下す
+execute if score $Countdown Global matches ..0 run scoreboard players set $tmw.activation ui_world 1
 execute if score $Countdown Global matches ..0 run scoreboard players reset $Countdown Global

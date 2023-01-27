@@ -24,6 +24,9 @@
 
 # library
     scoreboard objectives add ScoreToMaxHealth dummy
+
+#
+    gamerule mobGriefing false
     
 # チーム
     team add red "赤"

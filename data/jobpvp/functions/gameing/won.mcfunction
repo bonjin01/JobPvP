@@ -14,10 +14,12 @@
 # 勝利演出
     execute as @a[gamemode=adventure,tag=pvp_player] at @s run playsound entity.firework_rocket.launch neutral @a ~ ~ ~
 
+# UtilityItems の使用許可を剝奪する
+    scoreboard players set $tmw.activation ui_world 0
+
 # ゲーム終了
     schedule function jobpvp:gameing/gameset 5s
     
 # reset
     data remove storage jobpvp: won
     tag @a[tag=pvp_player] remove pvp_player
-
