@@ -1,5 +1,5 @@
 ## 各ポイントを読み取る
-## $Return が 1 ならポイント内、 0 ならポイントオーバー状態
+## $Return が残りポイント数
 
 # データ隔離
 data modify storage jobpvp: lib_point.Inventory set from entity @s Inventory
