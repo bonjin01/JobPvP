@@ -19,4 +19,5 @@
     effect give @a[tag=!debug_no_pvp] saturation 1 222
 
 
+# リリース前に消す
 gamemode creative @a[tag=!debug_no_pvp]
