@@ -1,8 +1,8 @@
-#> jobpvp:gameing/player/get_data
+#> jobpvp:player/get_data
 #
 # プレイヤーの処理
 #
-# @within function jobpvp:gameing/player/
+# @within function jobpvp:player/
 
 # please!
     function #oh_my_dat:please

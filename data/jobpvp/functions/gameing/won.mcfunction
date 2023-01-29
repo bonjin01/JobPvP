@@ -2,7 +2,7 @@
 #
 # 勝利
 #
-# @within function jobpvp:gameing/player/death
+# @within function jobpvp:player/death
 
 
 # 勝利者表示

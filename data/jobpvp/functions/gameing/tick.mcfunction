@@ -4,10 +4,10 @@
 
 
 # プレイヤーの処理
-    execute as @a at @s run function jobpvp:gameing/player/
+    execute as @a at @s run function jobpvp:player/
     
 # しんでるー！
-    execute as @a if score @s deathCount matches 1 run function jobpvp:gameing/player/death
+    execute as @a if score @s deathCount matches 1 run function jobpvp:player/death
 
 
 # reset

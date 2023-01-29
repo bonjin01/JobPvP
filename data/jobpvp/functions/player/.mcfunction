@@ -1,4 +1,4 @@
-#> jobpvp:gameing/player/
+#> jobpvp:player/
 #
 # プレイヤーの処理
 #
@@ -9,7 +9,7 @@
     tag @s add This
 
 # データコピー!
-    function jobpvp:gameing/player/get_data
+    function jobpvp:player/get_data
 
 
 

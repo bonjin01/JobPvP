@@ -1,4 +1,4 @@
-#> jobpvp:gameing/player/death
+#> jobpvp:player/death
 #
 # プレイヤーが死んだときの処理
 #
