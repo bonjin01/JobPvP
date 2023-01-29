@@ -23,7 +23,16 @@
     scoreboard objectives add Temporary dummy
 
 # library
-    scoreboard objectives add ScoreToMaxHealth dummy
+    scoreboard objectives add ScoreToMax_Health dummy {"text":"プレイヤーをこの最大体力にする(*0.0001HP)"}
+    scoreboard objectives add OldMax_Health dummy {"text": "前回の最大体力"}
+    scoreboard objectives add ScoreToArmor dummy {"text":"プレイヤーをこの防御力にする(*0.0001Armor)"}
+    scoreboard objectives add OldArmor dummy {"text": "前回の防御力"}
+    scoreboard objectives add ScoreToAttack_Damage dummy {"text":"プレイヤーをこの攻撃力にする(*0.0001Damage)"}
+    scoreboard objectives add OldAttack_Damage dummy {"text": "前回の攻撃力"}
+    scoreboard objectives add ScoreToMovement_Speed dummy {"text":"プレイヤーをこの移動速度にする(*0.0001Speed)"}
+    scoreboard objectives add OldMovement_Speed dummy {"text": "前回の移動速度"}
+    scoreboard objectives add ScoreToKnockback_Resistance dummy {"text":"プレイヤーをこのノックバック耐性にする(*0.0001KBR)"}
+    scoreboard objectives add OldKnockback_Resistance dummy {"text": "前回のノックバック耐性"}
 
 #
     gamerule mobGriefing false
