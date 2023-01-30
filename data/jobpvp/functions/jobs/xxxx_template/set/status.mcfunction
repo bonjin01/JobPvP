@@ -22,3 +22,5 @@
     #data modify storage jobpvp: max_health set value 
 # ノックバック耐性の増減
     #data modify storage jobpvp: knockback_resistance set value 
+# 残機の増減
+    #data modify storage jobpvp: life set value 
