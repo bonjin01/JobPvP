@@ -7,7 +7,10 @@
 
 # プレイヤーステータス
     scoreboard objectives add MaxHP dummy "現在の最大体力(10000倍された値)"
+    scoreboard objectives add Armor dummy "現在の防御力(10000倍された値)"
+    scoreboard objectives add Attack_Damage dummy "現在の攻撃力(10000倍された値)"
     scoreboard objectives add Speed dummy "現在の移動速度(10000倍された値)"
+    scoreboard objectives add Knockback_Resistance dummy "現在のノックバック耐性(10000倍された値)"
     scoreboard objectives add MaxSkillCost dummy
     scoreboard objectives add MaxItemCost dummy
     scoreboard objectives add Life dummy "残機"
