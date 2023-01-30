@@ -14,8 +14,10 @@
 # 表示
     tellraw @s [{"text":"職業を"},{"color": "green","nbt":"job_name","storage": "jobpvp:","interpret": true,"hoverEvent":{"action":"show_text","value":[{"nbt":"job_desc[0]","storage": "jobpvp:","interpret": true}]}},{"text": "に変更しました","color": "white"}]
 
+# ステータスリセット
+    function jobpvp:player/status_update/reset
 # ステータス更新
-    #function jobpvp:
+    function jobpvp:player/status_update/all
 
 # reset
     data remove storage jobpvp: job_ID
