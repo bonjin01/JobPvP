@@ -7,7 +7,7 @@
 
 #
 
-# 1秒後に10秒のカウントダウン
+# 3秒後に10秒のカウントダウン
     scoreboard players set $Countdown Global 10
     schedule function jobpvp:maps/countdown 3s
 
