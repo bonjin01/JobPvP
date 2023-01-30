@@ -4,10 +4,6 @@
 #
 
 
-# $MaxLifeから残機取得
-    execute unless score $MaxLife Global matches -2147483648..2147483647 run scoreboard players set $MaxLife Global 1
-    scoreboard players operation @a Life = $MaxLife Global
-
 # spectatorタグがついてる人をspectatorモードに
     gamemode spectator @a[tag=spectator]
 # spectatorタグがない人をadventureモードにして、判別タグを付ける
@@ -33,5 +29,5 @@
     effect give @a[tag=!spectator,tag=!debug_no_pvp] resistance 15 4
 
 # 体力/満腹度全快もする
-    scoreboard players set @a[tag=!debug_no_pvp] ScoreToHealth 100000
+    effect give @a[tag=!debug_no_pvp] instant_health 1 222
     effect give @a[tag=!debug_no_pvp] saturation 1 222
