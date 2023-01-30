@@ -8,5 +8,5 @@
     execute as @p run function #oh_my_dat:please
 
 # 表示
-    tellraw @p [{"nbt": "_[-4][-4][-4][-4][-4][-4][-4][-4].job","storage": "oh_my_dat:"}]
+    tellraw @p [{"nbt": "_[-4][-4][-4][-4][-4][-4][-4][-4].job_ID","storage": "oh_my_dat:"}]
     
