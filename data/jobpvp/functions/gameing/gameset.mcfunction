@@ -15,7 +15,7 @@
     clear @a[tag=!debug_no_pvp]
 
 # 体力/満腹度全快もする
-    scoreboard players set @a[tag=!debug_no_pvp] ScoreToHealth 100000
+    effect give @a[tag=!debug_no_pvp] instant_health 1 222
     effect give @a[tag=!debug_no_pvp] saturation 1 222
 
 
