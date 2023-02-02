@@ -2,4 +2,4 @@
 #
 #
 
-execute unless score @s OldScoreToArmor = @s ScoreToScoreToArmor run function jobpvp:lib/score_to_attribute/armor/modify
+execute unless score @s OldArmor = @s ScoreToArmor run function jobpvp:lib/score_to_attribute/armor/modify
