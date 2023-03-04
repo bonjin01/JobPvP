@@ -5,6 +5,7 @@ execute store result score $temp.cost Temporary run data get storage jobpvp: lib
 execute store result score $temp.count Temporary run data get storage jobpvp: lib_point.Inventory[0].Count
 execute if data storage jobpvp: lib_point.Inventory[0].tag.CountPerItemCost store result score $temp.cpi Temporary run data get storage jobpvp: lib_point.Inventory[0].tag.CountPerItemCost
 execute unless data storage jobpvp: lib_point.Inventory[0].tag.CountPerItemCost run scoreboard players set $temp.cpi Temporary 1
+execute if score $temp.cpi Temporary matches ..0 run scoreboard players set $temp.cpi Temporary 1
 
 # 計算し適応
 execute store result score $temp.costcalc Temporary run scoreboard players operation $temp.count Temporary /= $temp.cpi Temporary
