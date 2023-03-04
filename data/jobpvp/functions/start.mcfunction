@@ -4,6 +4,8 @@
 #
 
 
+# 一応tagリセット
+    tag @a[tag=pvp_player] remove pvp_player
 # spectatorタグがついてる人をspectatorモードに
     gamemode spectator @a[tag=spectator]
 # spectatorタグがない人をadventureモードにして、判別タグを付ける
