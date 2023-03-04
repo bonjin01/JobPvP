@@ -1,4 +1,4 @@
-#> jobpvp:debug/get_job_name
+#> debug:get_job_name
 #
 # 実行者の現在の職業を表示
 #
