@@ -19,6 +19,10 @@ execute if score $num Temporary matches 1.. run function jobpvp:lib/dataitem_to_
         data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Hold.Items set from storage jobpvp: lib_storage.Items
         data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Hold.Skills set from storage jobpvp: lib_storage.Skills
 
+#
+tellraw @a {"storage":"oh_my_dat:","nbt":"Hold.Items","interpret":false,"color":"green"}
+tellraw @a {"storage":"oh_my_dat:","nbt":"Hold.Skills","interpret":false,"color":"green"}
+
 # 結果を出力
 #scoreboard players operation $Return Temporary = $point Temporary
 
