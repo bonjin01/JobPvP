@@ -12,10 +12,16 @@ execute store result score $num Temporary run data get storage jobpvp: lib_stora
 # 切削
 execute if score $num Temporary matches 1.. run function jobpvp:lib/dataitem_to_storage/1.burn
 
+#
+tellraw @a {"storage":"jobpvp:","nbt":"lib_storage.Items","interpret":false,"color":"green"}
+tellraw @a {"storage":"jobpvp:","nbt":"lib_storage.Skills","interpret":false,"color":"green"}
+
 # OMD に書き込み
     ## ストレージを呼ぶ
         function #oh_my_dat:please
     ## 選択した職業を自分のストレージに入れる
+        data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Hold.Items set value []
+        data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Hold.Skills set value []
         data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Hold.Items set from storage jobpvp: lib_storage.Items
         data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Hold.Skills set from storage jobpvp: lib_storage.Skills
 
