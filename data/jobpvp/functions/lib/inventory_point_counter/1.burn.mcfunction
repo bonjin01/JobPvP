@@ -11,11 +11,11 @@ execute store result score $temp.costcalc Temporary run scoreboard players opera
 
 scoreboard players operation $temp.costcalc_ Temporary = $temp.costcalc Temporary
 scoreboard players operation $temp.costcalc_ Temporary *= $temp.cpi Temporary
+
+execute store result score $temp.count Temporary run data get storage jobpvp: lib_point.Inventory[0].Count
+execute unless score $temp.costcalc_ Temporary = $temp.count Temporary run scoreboard players add $temp.costcalc Temporary 1
+
 scoreboard players operation $temp.cost Temporary *= $temp.costcalc Temporary
-
-scoreboard players operation $temp.count Temporary *= $temp.cpi Temporary
-execute unless score $temp.costcalc_ Temporary = $temp.count Temporary run scoreboard players add $temp.cost Temporary 1
-
 scoreboard players operation $point Temporary -= $temp.cost Temporary
 
 # 計算した場所を削除し再起
