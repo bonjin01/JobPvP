@@ -2,7 +2,7 @@
 
 # データをスコアにコピー
 execute store result score $temp.item_cost Temporary run data get storage jobpvp: lib_point.Inventory[0].tag.ItemCost
-execute store result score $temp.item_cost Temporary run data get storage jobpvp: lib_point.Inventory[0].tag.SkillCost
+execute store result score $temp.skill_cost Temporary run data get storage jobpvp: lib_point.Inventory[0].tag.SkillCost
 execute store result score $temp.count Temporary run data get storage jobpvp: lib_point.Inventory[0].Count
 execute if data storage jobpvp: lib_point.Inventory[0].tag.CountPerCost store result score $temp.cpi Temporary run data get storage jobpvp: lib_point.Inventory[0].tag.CountPerCost
 execute unless data storage jobpvp: lib_point.Inventory[0].tag.CountPerCost run scoreboard players set $temp.cpi Temporary 1
