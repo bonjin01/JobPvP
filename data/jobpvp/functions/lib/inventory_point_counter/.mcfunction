@@ -19,3 +19,8 @@ data remove storage jobpvp: lib_point
 scoreboard players reset $num Temporary
 scoreboard players reset $point Temporary
 scoreboard players reset $temp Temporary
+scoreboard players reset $temp.cost Temporary
+scoreboard players reset $temp.count Temporary
+scoreboard players reset $temp.costcalc Temporary
+scoreboard players reset $temp.costcalc_ Temporary
+scoreboard players reset $temp.cpi Temporary
