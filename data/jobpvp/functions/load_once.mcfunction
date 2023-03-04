@@ -19,4 +19,5 @@
     scoreboard players set $tmw.activation ui_world 0
 
 # 読み込み済み
-    data modify storage jobpvp: load set value true
+# 配布時 true にする
+    data modify storage jobpvp: load set value false
