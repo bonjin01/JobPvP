@@ -16,6 +16,8 @@
     scoreboard objectives add MaxSkillCost dummy
     scoreboard objectives add MaxItemCost dummy
     scoreboard objectives add Life dummy "残機"
+    scoreboard objectives add MP dummy "現在のMP"
+    scoreboard objectives add MaxMP dummy "現在の最大MP"
 
 # コマンド判定用
     scoreboard objectives add deathCount deathCount
@@ -46,6 +48,7 @@
     scoreboard players set $BaseLife Global 10000
     scoreboard players set $BaseSkillCost Global 10
     scoreboard players set $BaseItemCost Global 10
+    scoreboard players set $BaseMaxMP Global 100
 
 # UtilityItems の使用許可を剝奪する
     scoreboard players set $tmw.activation ui_world 0
