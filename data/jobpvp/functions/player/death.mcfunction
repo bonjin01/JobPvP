@@ -19,19 +19,19 @@
         execute if score $team Global matches 0 if score $player_count Global matches 1 run function jobpvp:gameing/won
 
     #チーム戦
-        execute if score $team Global matches 1 store result score $player_count_team Global if entity @a[tag=pvp_player,team=red]
-        execute if score $team Global matches 1 if score $player_count Global = $player_count_team Global run data modify storage jobpvp: won set value "red"
+        execute unless score $team Global matches 0 store result score $player_count_team Global if entity @a[tag=pvp_player,team=red]
+        execute unless score $team Global matches 0 if score $player_count Global = $player_count_team Global run data modify storage jobpvp: won set value "red"
 
-        execute if score $team Global matches 1 store result score $player_count_team Global if entity @a[tag=pvp_player,team=blue]
-        execute if score $team Global matches 1 if score $player_count Global = $player_count_team Global run data modify storage jobpvp: won set value "blue"
+        execute unless score $team Global matches 0 store result score $player_count_team Global if entity @a[tag=pvp_player,team=blue]
+        execute unless score $team Global matches 0 if score $player_count Global = $player_count_team Global run data modify storage jobpvp: won set value "blue"
 
-        execute if score $team Global matches 1 store result score $player_count_team Global if entity @a[tag=pvp_player,team=green]
-        execute if score $team Global matches 1 if score $player_count Global = $player_count_team Global run data modify storage jobpvp: won set value "green"
+        execute unless score $team Global matches 0 store result score $player_count_team Global if entity @a[tag=pvp_player,team=green]
+        execute unless score $team Global matches 0 if score $player_count Global = $player_count_team Global run data modify storage jobpvp: won set value "green"
 
-        execute if score $team Global matches 1 store result score $player_count_team Global if entity @a[tag=pvp_player,team=yellow]
-        execute if score $team Global matches 1 if score $player_count Global = $player_count_team Global run data modify storage jobpvp: won set value "yellow"
+        execute unless score $team Global matches 0 store result score $player_count_team Global if entity @a[tag=pvp_player,team=yellow]
+        execute unless score $team Global matches 0 if score $player_count Global = $player_count_team Global run data modify storage jobpvp: won set value "yellow"
 
-        execute if score $team Global matches 1 if data storage jobpvp: won run function jobpvp:gameing/won
+        execute unless score $team Global matches 0 if data storage jobpvp: won run function jobpvp:gameing/won
         
 # reset
     scoreboard players reset $player_count Global
