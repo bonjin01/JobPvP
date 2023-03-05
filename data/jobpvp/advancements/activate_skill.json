@@ -1,19 +1,15 @@
 {
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:using_item",
-        "conditions": {
-          "item": {
-            "items": [
-              "minecraft:crossbow"
-            ],
-            "nbt": "{Charged:1b,ItemType:\"skill\",Itemdata:{Skill:{SkillType:\"active\"}}}"
-          }
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:shot_crossbow",
+      "conditions": {
+        "item": {
+          "nbt": "{ItemType:\"skill\",Itemdata:{Skill:{SkillType:\"active\"}}}"
         }
       }
-    },
-    "rewards": {
-      "function": "jobpvp:skills/activeevent"
     }
+  },
+  "rewards": {
+    "function": "jobpvp:skills/activate.active"
   }
-  
+}
