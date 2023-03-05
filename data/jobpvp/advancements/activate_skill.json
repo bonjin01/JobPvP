@@ -7,7 +7,7 @@
             "items": [
               "minecraft:crossbow"
             ],
-            "nbt": "{ItemType:\"skill\",Itemdata:{Skill:{SkillType:\"active\"}}}"
+            "nbt": "{Charged:1b,ItemType:\"skill\",Itemdata:{Skill:{SkillType:\"active\"}}}"
           }
         }
       }
