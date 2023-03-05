@@ -53,6 +53,7 @@
 # ゲームの初期設定
     scoreboard players set $Gamemode Global 0
     scoreboard players set $team Global 0
+    scoreboard players set $Map Global 0
 
 # UtilityItems の使用許可を剝奪する
     scoreboard players set $tmw.activation ui_world 0
