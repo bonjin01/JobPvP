@@ -45,10 +45,14 @@
     scoreboard players set $BaseDamage Global 10000
     scoreboard players set $BaseSpeed Global 1000
     scoreboard players set $BaseKBR Global 00000
-    scoreboard players set $BaseLife Global 10000
+    scoreboard players set $BaseLife Global 1
     scoreboard players set $BaseSkillCost Global 10
     scoreboard players set $BaseItemCost Global 10
     scoreboard players set $BaseMaxMP Global 100
+
+# ゲームの初期設定
+    scoreboard players set $Gamemode Global 0
+    scoreboard players set $team Global 0
 
 # UtilityItems の使用許可を剝奪する
     scoreboard players set $tmw.activation ui_world 0
