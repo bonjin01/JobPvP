@@ -10,6 +10,6 @@
     }
   },
   "rewards": {
-    "function": "jobpvp:skills/activate.active"
+    "function": "jobpvp:skills/activeevent"
   }
 }
