@@ -1,7 +1,7 @@
 ## データを切削する
 
 # データを取得
-execute store result score $cooltime.CT Temporary run data get storage lib: skill_cooltime.Skills[-1].nowCT 20
+execute store result score $cooltime.CT Temporary run data get storage lib: skill_cooltime.Skills[-1].nowCT 20.0001
 
 tellraw @a [{"text":"nowCT: "},{"nbt":"skill_cooltime.Skills[-1].nowCT","storage":"lib:"}]
 tellraw @a [{"text":"$cooltime.CT: "},{"score":{"objective":"Temporary","name":"$cooltime.CT"}}]
