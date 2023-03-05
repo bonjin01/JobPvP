@@ -18,8 +18,15 @@ execute if data storage jobpvp: ActiveSkill{Hand:0b} run data modify storage job
 execute if data storage jobpvp: ActiveSkill{Hand:1b} run data modify storage jobpvp: ActiveSkill.ActivatingSkill set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].offhand.tag.Itemdata.Skill
 execute if data storage jobpvp: ActiveSkill.ActivatingSkill run function jobpvp:skills/activate.active
 
+# 再発動可
+execute if data storage jobpvp: ActiveSkill{Hand:0b} run data modify storage jobpvp: ActiveSkill.ReActive set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SelectedItem.tag
+execute if data storage jobpvp: ActiveSkill{Hand:1b} run data modify storage jobpvp: ActiveSkill.ReActive set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].offhand.tag
+data modify storage jobpvp: ActiveSkill.ReActive.Charged set value 1b
+data modify storage jobpvp: ActiveSkill.ReActive.ChargedProjectiles set value [{id:"minecraft:air",Count:1b}]
+execute if data storage jobpvp: ActiveSkill{Hand:0b} run item modify entity @s weapon.mainhand jobpvp:reactive
+execute if data storage jobpvp: ActiveSkill{Hand:1b} run item modify entity @s weapon.offhand jobpvp:reactive
+
+advancement revoke @s only jobpvp:activate_skill
+
 # リセット
 data remove storage jobpvp: ActiveSkill
-
-# 再発動可
-advancement revoke @s only jobpvp:activate_skill
