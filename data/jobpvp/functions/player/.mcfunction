@@ -11,6 +11,9 @@
 # データコピー!
     function jobpvp:player/get_data
 
+# CT減算
+    function jobpvp:player/skill/tick
+
 # パッシブ発動
     execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{SkillType:"passive",nowCT:0.0f}] run function jobpvp:skills/
 
