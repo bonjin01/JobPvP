@@ -3,13 +3,18 @@
 # データを取得
 execute store result score $cooltime.CT Temporary run data get storage lib: skill_cooltime.Skills[-1].nowCT 20
 
+tellraw @a [{"text":"$cooltime.CT: "},{"score":{"objective":"Temporary","name":"$cooltime.CT"}}]
+tellraw @a [{"text":"$sub: "},{"score":{"objective":"Temporary","name":"$cooltime.Sub"}}]
+
 # 減算し適応
 scoreboard players operation $cooltime.CT Temporary -= $cooltime.Sub Temporary
 execute if score $cooltime.CT Temporary matches ..-1 run scoreboard players set $cooltime.CT Temporary 0
+
+tellraw @a [{"text":"$cooltime.CT_Sub: "},{"score":{"objective":"Temporary","name":"$cooltime.CT"}}]
+
 execute store result storage lib: skill_cooltime.Skills[-1].nowCT float 0.05 run scoreboard players get $cooltime.CT Temporary
 scoreboard players reset $cooltime.CT Temporary
 
-tellraw @a [{"text":"$sub: "},{"score":{"objective":"Temporary","name":"$cooltime.Sub"}}]
 tellraw @a [{"text":"nowCT: "},{"nbt":"skill_cooltime.Skills[-1].nowCT","storage":"lib:"}]
 
 # 取得した場所を削除し再起
