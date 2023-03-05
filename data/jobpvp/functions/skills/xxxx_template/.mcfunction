@@ -12,6 +12,7 @@
 # MP減算
     execute store result score $temp Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:-1}].MP
     scoreboard players operation @s MP -= $temp Temporary
+    scoreboard players reset $temp Temporary
 
 # CT適応
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:-1}].nowCT set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:-1}].CT

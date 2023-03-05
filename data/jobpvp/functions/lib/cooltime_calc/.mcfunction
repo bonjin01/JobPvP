@@ -8,7 +8,7 @@ function #oh_my_dat:please
 execute unless data storage lib: skill_cooltime.Sub run data modify storage lib: skill_cooltime.Sub set value 0.05f
 
 # データ隔離
-data modify storage lib: in set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills
+data modify storage lib: in set from storage lib: skill_cooltime.In
 data modify storage lib: skill_cooltime.Out set value []
 
 # リバース
@@ -24,11 +24,6 @@ execute store result score $num Temporary run data get storage lib: skill_coolti
 execute store result score $cooltime.Sub Temporary run data get storage lib: skill_cooltime.Sub 20
 execute if score $num Temporary matches 1.. run function jobpvp:lib/cooltime_calc/1.burn
 
-# OMD に書き込み
-    ## CT適応後のスキルリストを自分のストレージに入れる
-        data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills set from storage lib: skill_cooltime.Out
-
 # 最後に
-data remove storage lib: skill_cooltime
 scoreboard players reset $num Temporary
 scoreboard players reset $cooltime.Sub Temporary

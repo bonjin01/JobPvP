@@ -1,0 +1,19 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:using_item",
+        "conditions": {
+          "item": {
+            "items": [
+              "minecraft:crossbow"
+            ],
+            "nbt": "{ItemType:\"skill\",Itemdata:{Skill:{SkillType:\"active\"}}}"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "jobpvp:skills/activeevent"
+    }
+  }
+  

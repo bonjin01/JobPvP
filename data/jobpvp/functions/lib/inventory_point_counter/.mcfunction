@@ -29,4 +29,4 @@ scoreboard players reset $temp.item_costcalc_ Temporary
 scoreboard players reset $temp.skill_cost Temporary
 scoreboard players reset $temp.skill_costcalc Temporary
 scoreboard players reset $temp.skill_costcalc_ Temporary
-scoreboard players reset $temp.cpi Temporary
+scoreboard players reset $temp.cpc Temporary
