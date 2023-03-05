@@ -11,6 +11,7 @@
     playsound entity.firework_rocket.launch player @a ~ ~ ~ 1 1.2 0
     tp @s @s
     effect give @s levitation 1 29 false
+    say 発動しました
 
 # MP減算
     execute store result score $temp Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:1000}].MP
