@@ -14,10 +14,12 @@ data modify storage lib: skill_cooltime.Out set value []
 # リバース
 function jobpvp:lib/reverse/
 data modify storage lib: skill_cooltime.Skills set from storage lib: out
+data remove storage lib: in
 data remove storage lib: out
 
 # カウント
 execute store result score $num Temporary run data get storage lib: skill_cooltime.Skills
+tellraw @a [{"text":"$num: "},{"score":{"objective":"Temporary","name":"$num"}}]
 
 # 切削
 execute store result score $cooltime.Sub Temporary run data get storage lib: skill_cooltime.Sub 20
