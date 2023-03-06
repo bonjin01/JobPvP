@@ -39,6 +39,10 @@
     scoreboard objectives add ScoreToKnockback_Resistance dummy {"text":"プレイヤーをこのノックバック耐性にする(*0.0001KBR)"}
     scoreboard objectives add OldKnockback_Resistance dummy {"text": "前回のノックバック耐性"}
 
+# System
+    scoreboard objectives add num dummy
+    scoreboard players set #10 num 10
+
 # ステータス
     scoreboard players set $BaseHP Global 200000
     scoreboard players set $BaseArmor Global 00000
