@@ -18,8 +18,8 @@
 # 開始メッセージ
     tellraw @a [{"text": "まもなく、ゲームが開始されます"}]
 
-# Mapの座標取得とセットアップ
-    function #jobpvp:maps
+# Mapのセットアップ
+    schedule function #jobpvp:maps 3s
 
 # TPする
     schedule function jobpvp:maps/tp/ 3s
@@ -28,7 +28,7 @@
     effect clear @a[tag=!spectator,tag=!debug_no_pvp]
 
 # 開始まで耐性5付与
-    effect give @a[tag=!spectator,tag=!debug_no_pvp] resistance 15 4
+    effect give @a[tag=!spectator,tag=!debug_no_pvp] resistance 99999 4
 
 # 体力/満腹度全快もする
     effect give @a[tag=!debug_no_pvp] instant_health 1 222
