@@ -11,6 +11,7 @@
 # 残機0ならスペクテイター
     execute if score @s Life matches 0 run gamemode spectator @s
     execute if score @s Life matches 0 run tag @s remove pvp_player
+    execute if score @s Life matches 0 run scoreboard players reset @s Life
 
 # 残り人数の確認
     execute store result score $player_count Global if entity @a[tag=pvp_player] 
