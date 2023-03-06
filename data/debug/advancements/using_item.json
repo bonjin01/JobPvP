@@ -13,6 +13,6 @@
         }
     },
     "rewards": {
-        "function": "debug:map_point_setting/"
+        "function": "debug:map_settings/point/"
     }
 }
