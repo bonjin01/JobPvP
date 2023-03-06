@@ -25,11 +25,11 @@
     schedule function jobpvp:maps/tp/ 3s
 
 # effect clear
-    effect clear @a[tag=!spectator,tag=!debug_no_pvp]
+    effect clear @a[tag=pvp_player]
 
 # 開始まで耐性5付与
-    effect give @a[tag=!spectator,tag=!debug_no_pvp] resistance 99999 4
+    effect give @a[tag=pvp_player] resistance 99999 4
 
 # 体力/満腹度全快もする
-    effect give @a[tag=!debug_no_pvp] instant_health 1 222
-    effect give @a[tag=!debug_no_pvp] saturation 1 222
+    effect give @a[tag=pvp_player] instant_health 1 222
+    effect give @a[tag=pvp_player] saturation 1 222
