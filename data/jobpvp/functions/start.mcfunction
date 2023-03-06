@@ -31,5 +31,5 @@
     effect give @a[tag=pvp_player] resistance 99999 4
 
 # 体力/満腹度全快もする
-    effect give @a[tag=pvp_player] instant_health 1 222
+    effect give @a[tag=pvp_player] instant_health 1 220
     effect give @a[tag=pvp_player] saturation 1 222
