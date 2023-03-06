@@ -33,3 +33,6 @@
 # 体力/満腹度全快もする
     effect give @a[tag=pvp_player] instant_health 1 220
     effect give @a[tag=pvp_player] saturation 1 19
+
+# life設定
+    scoreboard players operation @a Life = $BaseLife Global
