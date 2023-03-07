@@ -7,6 +7,16 @@
 # please!
     function #oh_my_dat:please
 
+# 旧データは削除
+    data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Inventory
+    data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SelectedItem
+    data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Health
+    data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].offhand
+    data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].feet
+    data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].legs
+    data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].chest
+    data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].head
+
 # データコピー!
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Inventory set from entity @s Inventory
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SelectedItem set from entity @s SelectedItem
