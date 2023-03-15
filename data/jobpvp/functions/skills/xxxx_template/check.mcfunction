@@ -1,4 +1,4 @@
-#> jobpvp:skills/1000_example/check
+#> jobpvp:skills/xxxx_template/check
 #
 # スキルを発動したときのファンクション
 #
