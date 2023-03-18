@@ -8,7 +8,7 @@
 
 # 効果発動
     playsound entity.player.attack.sweep player @a ~ ~ ~ 1 1 0
-    data merge storage ui:common {input:{Mode:"create",Var:22}}
+    data merge storage ui:common {input:{Mode:"create",Var:-10020,Rand:{RotY:1}}}
     execute at @s rotated ~ 0 positioned ^ ^ ^2.5 positioned ~ ~1 ~ rotated ~90 0 run function ui:common/particle
 
 # MP減算
