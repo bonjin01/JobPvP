@@ -15,7 +15,10 @@
 
 # プレイヤーの処理
     execute as @a at @s run function jobpvp:player/
-    
+
+# プレイヤーのリセット処理
+    execute as @a at @s run function jobpvp:player/last/
+
 # reset
     scoreboard players reset $gametime Temporary
-    
+
