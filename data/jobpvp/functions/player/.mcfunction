@@ -18,5 +18,8 @@
 # パッシブ発動
     execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{SkillType:"passive"}] run function jobpvp:skills/
 
+# しんでるー！
+    execute if score @s deathCount matches 1.. run function jobpvp:player/death
+
 # 私じゃない
     tag @s remove This

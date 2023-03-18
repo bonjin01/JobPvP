@@ -6,7 +6,7 @@
 
 
 # 残機を減らす
-    scoreboard players remove @s Life 1
+    execute if score $Gameing Global matches 1 run scoreboard players remove @s Life 1
 
 # 残機0ならスペクテイター
     execute if score @s Life matches 0 run gamemode spectator @s
@@ -33,9 +33,9 @@
         execute unless score $team Global matches 0 if score $player_count Global = $player_count_team Global run data modify storage jobpvp: won set value "yellow"
 
         execute unless score $team Global matches 0 if data storage jobpvp: won run function jobpvp:gameing/won
-        
+
 # reset
     scoreboard players reset $player_count Global
     scoreboard players reset $player_count_team Global
     data remove storage jobpvp: won
-    
+    scoreboard players reset @s deathCount
