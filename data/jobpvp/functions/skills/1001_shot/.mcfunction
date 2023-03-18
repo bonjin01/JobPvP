@@ -7,8 +7,7 @@
 # 
 
 # 効果発動
-    playsound entity.ender_dragon.flap player @a ~ ~ ~ 1 1 0
-    playsound entity.firework_rocket.launch player @a ~ ~ ~ 1 1.2 0
+    playsound entity.player.attack.sweep player @a ~ ~ ~ 1 1 0
     data merge storage ui:common {input:{Mode:"create",Var:22}}
     execute at @s rotated ~ 0 positioned ^ ^ ^2.5 positioned ~ ~1 ~ rotated ~90 0 run function ui:common/particle
 
@@ -17,8 +16,8 @@
 
 # CT適応
     execute store result score $nowgametime Temporary run time query gametime
-    execute store result score $CT Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:1000}].CT
+    execute store result score $CT Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:1001}].CT
     scoreboard players operation $CT Temporary += $nowgametime Temporary
-    execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:1000}].CTGametime int 1 run scoreboard players get $CT Temporary
+    execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:1001}].CTGametime int 1 run scoreboard players get $CT Temporary
     scoreboard players reset $nowgametime Temporary
     scoreboard players reset $CT Temporary
