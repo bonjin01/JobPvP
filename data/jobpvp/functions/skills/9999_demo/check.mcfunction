@@ -1,10 +1,18 @@
-#> jobpvp:skills/1000_example/check
+#> jobpvp:skills/9999_example/check
 #
 # スキルを発動したときのファンクション
 #
 # CTとMPをチェックする
 # 
 # @within jobpvp:skills/activate.active
+
+# データは一つで十分
+execute store result score $dataCount Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:9999}]
+execute if score $dataCount Temporary matches 2.. run data modify storage jobpvp: RemoveSkillData_temp set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:9999}]
+execute if score $dataCount Temporary matches 2.. run data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:9999}]
+execute if score $dataCount Temporary matches 2.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills append from storage jobpvp: RemoveSkillData_temp[0]
+execute if score $dataCount Temporary matches 2.. run data remove storage jobpvp: RemoveSkillData_temp
+scoreboard players reset $dataCount Temporary
 
 # データ取得
 execute store result score $reqmp Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:9999}].MP
