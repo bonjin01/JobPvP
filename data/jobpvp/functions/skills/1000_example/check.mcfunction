@@ -7,7 +7,7 @@
 # @within jobpvp:skills/activate.active
 
 # データは一つで十分
-execute store result score $dataCount Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:1000}]
+execute store result score $dataCount Temporary if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:1000}]
 execute if score $dataCount Temporary matches 2.. run data modify storage jobpvp: RemoveSkillData_temp set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:1000}]
 execute if score $dataCount Temporary matches 2.. run data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:1000}]
 execute if score $dataCount Temporary matches 2.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills append from storage jobpvp: RemoveSkillData_temp[0]

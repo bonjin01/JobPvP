@@ -1,4 +1,4 @@
-#> jobpvp:skills/xxxx_template/
+#> jobpvp:skills/xxxx_template_passive/
 #
 # スキルを発動したときのファンクション
 #
@@ -8,11 +8,6 @@
 
 # 効果発動
     ##自由に効果を記述
-
-# MP減算
-    execute store result score $temp Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:-1}].MP
-    scoreboard players operation @s MP -= $temp Temporary
-    scoreboard players reset $temp Temporary
 
 # CT適応
     execute store result score $nowgametime Temporary run time query gametime
