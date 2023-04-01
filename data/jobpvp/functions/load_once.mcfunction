@@ -17,6 +17,7 @@
     scoreboard objectives add MaxItemCost dummy
     scoreboard objectives add Life dummy "残機"
     scoreboard objectives add MP dummy "現在のMP"
+    scoreboard objectives add MPRegen dummy "MP回復量(*/s)"
     scoreboard objectives add MaxMP dummy "現在の最大MP"
 
 # コマンド判定用
@@ -42,6 +43,7 @@
 # System
     scoreboard objectives add num dummy
     scoreboard players set #10 num 10
+    scoreboard players set #20 num 20
 
 # ステータス
     scoreboard players set $BaseHP Global 200000
@@ -53,6 +55,8 @@
     scoreboard players set $BaseSkillCost Global 10
     scoreboard players set $BaseItemCost Global 10
     scoreboard players set $BaseMaxMP Global 100
+    scoreboard players set $BaseMPRegen Global 3
+    scoreboard players set $MPRegenGametime Global 0
 
 # ゲームの初期設定
     scoreboard players set $Gamemode Global 0
