@@ -22,7 +22,7 @@ execute if score $ctgametime Temporary > $nowgametime Temporary run scoreboard p
 execute unless score $ctgametime Temporary > $nowgametime Temporary run scoreboard players set $remainct Temporary 0
 
 # クールタイム表記
-execute if score $remainct Temporary matches 0 run function jobpvp:skills/0_example/
+execute if score $remainct Temporary matches 0 run function jobpvp:skills/0000_example/
 
 # 後々のために例外処理
 execute if score $remainct Temporary matches ..-1 run title @s actionbar [{"text":"このメッセージは出ないはずだよ remainct: ","color":"red"},{"score":{"name": "$remainct","objective": "Temporary"}}]
