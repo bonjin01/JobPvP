@@ -10,16 +10,8 @@
 # 職業のデータを取ってくる
     function jobpvp:jobs/0000_example/set/status
 
-# 記録
-    execute as @p run function jobpvp:jobs/record
-
-# 表示
-    execute as @p run function jobpvp:jobs/job_text
-
-# ステータスリセット
-    execute as @p run function jobpvp:player/status_update/reset
-# ステータス更新
-    execute as @p run function jobpvp:player/status_update/all
+# 職業更新の処理
+    execute as @p run function jobpvp:jobs/updata
 
 # reset
     data remove storage jobpvp: job_ID
