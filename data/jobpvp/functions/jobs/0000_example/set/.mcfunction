@@ -14,12 +14,12 @@
     execute as @p run function jobpvp:jobs/record
 
 # 表示
-
+    execute as @p run function jobpvp:jobs/job_text
 
 # ステータスリセット
-    function jobpvp:player/status_update/reset
+    execute as @p run function jobpvp:player/status_update/reset
 # ステータス更新
-    function jobpvp:player/status_update/all
+    execute as @p run function jobpvp:player/status_update/all
 
 # reset
     data remove storage jobpvp: job_ID
