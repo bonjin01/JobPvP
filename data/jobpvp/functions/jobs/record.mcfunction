@@ -1,6 +1,6 @@
 #> jobpvp:jobs/record
 #
-# 今の職業を記録/表示
+# 今の職業を記録
 #
 # @within function jobpvp:jobs/*/set/
 
@@ -10,16 +10,8 @@
 
 # 選択した職業を自分のストレージに入れる
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].job_ID set from storage jobpvp: job_ID
-
-# 表示
-    tellraw @s [{"text":"職業を"},{"color": "green","nbt":"job_name","storage": "jobpvp:","interpret": true,"hoverEvent":{"action":"show_text","value":[{"nbt":"job_desc[0]","storage": "jobpvp:","interpret": true}]}},{"text": "に変更しました","color": "white"}]
-
-# ステータスリセット
-    function jobpvp:player/status_update/reset
-# ステータス更新
-    function jobpvp:player/status_update/all
-
-# reset
-    data remove storage jobpvp: job_ID
-    data remove storage jobpvp: job_name
-    data remove storage jobpvp: job_desc
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].attack_damage set from storage jobpvp: attack_damage
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].armor set from storage jobpvp: armor
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].movement_speed set from storage jobpvp: movement_speed
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].max_health set from storage jobpvp: max_health
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].knockback_resistance set from storage jobpvp: knockback_resistance
