@@ -1,0 +1,19 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:consume_item",
+        "conditions": {
+          "item": {
+            "items": [
+              "minecraft:honey_bottle"
+            ],
+            "nbt": "{Itemdata:{Potion:{}}}"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "jobpvp:hold/item/00001_potion/"
+    }
+  }
+  
