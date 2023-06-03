@@ -16,6 +16,7 @@ summon area_effect_cloud ~ ~ ~ {Tags:["Potion_AEC"],Particle:"",NoGravity:1b,Rad
 data modify entity @e[tag=Potion_AEC,distance=0,limit=1] Effects set from storage jobpvp: lib_potion.Output.Effects[]
 
 # 最後に
+advancement revoke @s only jobpvp:consume_potion
 data remove storage jobpvp: lib_potion
 scoreboard players reset $num Temporary
 scoreboard players reset $potionId Temporary
