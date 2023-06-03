@@ -3,9 +3,9 @@
 # データ隔離
 function #oh_my_dat:please
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.SelectedItem.tag.Itemdata.Potion run data modify storage jobpvp: lib_potion.Potion set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.SelectedItem.tag.Itemdata.Potion
-execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.SelectedItem.tag.Itemdata.Potion run data modify storage jobpvp: lib_potion.Item set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.SelectedItem.Id
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.SelectedItem.tag.Itemdata.Potion run data modify storage jobpvp: lib_potion.Item set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.SelectedItem.id
 execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.SelectedItem.tag.Itemdata.Potion if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.OffhandItem.tag.Itemdata.Potion run data modify storage jobpvp: lib_potion.Potion set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.OffhandItem.tag.Itemdata.Potion
-execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.SelectedItem.tag.Itemdata.Potion if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.OffhandItem.tag.Itemdata.Potion run data modify storage jobpvp: lib_potion.Item set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.OffhandItem.Id
+execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.SelectedItem.tag.Itemdata.Potion if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.OffhandItem.tag.Itemdata.Potion run data modify storage jobpvp: lib_potion.Item set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.OffhandItem.id
 
 # カウント
 execute store result score $num Temporary run data get storage jobpvp: lib_potion.Potion.Effects
