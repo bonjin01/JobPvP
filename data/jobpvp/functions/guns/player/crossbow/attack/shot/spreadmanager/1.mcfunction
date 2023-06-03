@@ -1,0 +1,16 @@
+# 1.立方形拡散
+
+# ランダム
+    scoreboard players operation $mod ui_calc1 = $speed.plus ui_temp
+    execute if score $mod ui_calc1 matches 1.. run function ui:common/rand
+    execute if score $mod ui_calc1 matches 1.. run scoreboard players operation $speed.add ui_temp = $rand ui_calc1
+
+# 弾を出す
+    summon minecraft:marker ^ ^ ^1 {Tags:["ui","ui_marker"]}
+    execute if score $spread ui_temp matches 1.. run function jobpvp:guns/player/crossbow/attack/shot/spreadmanager/square_shuffle
+    execute facing entity @e[tag=ui_marker,limit=1] feet run function jobpvp:guns/player/crossbow/attack/shot/fire_straight
+    kill @e[tag=ui_marker]
+
+# ショットガン.lp
+    scoreboard players remove $pack ui_temp 1
+    execute if score $pack ui_temp matches 1.. run function jobpvp:guns/player/crossbow/attack/shot/spreadmanager/1
