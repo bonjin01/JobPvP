@@ -10,7 +10,7 @@
 # 職業の名前
     data modify storage jobpvp: job_name set value '{"text":"アタッカー"}'
 # 職業のフレーバーテキスト
-    data modify storage jobpvp: job_desc set value ['{"text":"攻撃力\\u0020\\u0020+3"}']
+    data modify storage jobpvp: job_desc set value ['{"text":"攻撃力\\u0020\\u0020+3"}','{"text":"test1"}','{"text":"test2"}']
 
 # 攻撃力の増減
     data modify storage jobpvp: attack_damage set value 3
