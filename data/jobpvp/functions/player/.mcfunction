@@ -8,6 +8,10 @@
 # 私だ！
     tag @s add This
 
+# ガラス瓶残ってない？
+    execute if score @s Used_Potion matches 1 run clear @s glass_bottle 1
+    execute if score @s Used_Potion matches 1 run scoreboard players reset @s Used_Potion
+
 # データコピー!
     function jobpvp:player/get_data
 
