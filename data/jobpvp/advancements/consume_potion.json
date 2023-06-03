@@ -13,7 +13,7 @@
       }
     },
     "rewards": {
-      "function": "jobpvp:hold/item/00001_potion/"
+      "function": "jobpvp:lib/apply_potion/"
     }
   }
   
