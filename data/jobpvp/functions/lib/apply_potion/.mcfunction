@@ -1,9 +1,11 @@
-## ハチミツ入り瓶に設定されたポーション効果を適応する
+## アイテムに設定されたポーション効果を適応する
 
 # データ隔離
 function #oh_my_dat:please
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.SelectedItem.tag.Itemdata.Potion run data modify storage jobpvp: lib_potion.Potion set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.SelectedItem.tag.Itemdata.Potion
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.SelectedItem.tag.Itemdata.Potion run data modify storage jobpvp: lib_potion.Item set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.SelectedItem.Id
 execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.SelectedItem.tag.Itemdata.Potion if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.OffhandItem.tag.Itemdata.Potion run data modify storage jobpvp: lib_potion.Potion set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.OffhandItem.tag.Itemdata.Potion
+execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.SelectedItem.tag.Itemdata.Potion if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.OffhandItem.tag.Itemdata.Potion run data modify storage jobpvp: lib_potion.Item set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PastData.OffhandItem.Id
 
 # カウント
 execute store result score $num Temporary run data get storage jobpvp: lib_potion.Potion.Effects
@@ -18,7 +20,8 @@ tellraw @s {"storage":"jobpvp:","nbt":"lib_potion.Output.Effects[]"}
 
 # 最後に
 advancement revoke @s only jobpvp:consume_potion
-clear @s glass_bottle 1
+execute if data storage jobpvp: lib_potion{Item:"minecraft:honey_bottle"} run clear @s glass_bottle 1
+
 data remove storage jobpvp: lib_potion
 scoreboard players reset $num Temporary
 scoreboard players reset $potionId Temporary

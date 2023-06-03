@@ -4,9 +4,6 @@
         "trigger": "minecraft:consume_item",
         "conditions": {
           "item": {
-            "items": [
-              "minecraft:honey_bottle"
-            ],
             "nbt": "{Itemdata:{Potion:{}}}"
           }
         }
