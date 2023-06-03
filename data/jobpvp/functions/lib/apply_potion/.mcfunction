@@ -18,6 +18,7 @@ tellraw @s {"storage":"jobpvp:","nbt":"lib_potion.Output.Effects[]"}
 
 # 最後に
 advancement revoke @s only jobpvp:consume_potion
+clear @s glass_bottle 1
 data remove storage jobpvp: lib_potion
 scoreboard players reset $num Temporary
 scoreboard players reset $potionId Temporary
