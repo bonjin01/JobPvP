@@ -6,4 +6,4 @@
 
 
 # 表示
-    tellraw @s [{"text":"職業を"},{"color": "green","nbt":"job_name","storage": "jobpvp:","interpret": true,"hoverEvent":{"action":"show_text","value":[{"nbt":"job_desc[]","storage": "jobpvp:","interpret": true}]}},{"text": "に変更しました","color": "white"}]
+    tellraw @s [{"text":"職業を"},{"color": "green","nbt":"job_name","storage": "jobpvp:","interpret": true,"hoverEvent":{"action":"show_text","value":[{"nbt":"job_desc[]","storage": "jobpvp:","interpret": true,"separator":"\n"}]}},{"text": "に変更しました","color": "white"}]
