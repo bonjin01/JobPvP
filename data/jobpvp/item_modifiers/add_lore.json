@@ -1,0 +1,13 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "nbt": "job_desc[-1]",
+        "storage": "jobpvp:",
+        "interpret": true
+      }
+    ]
+  }
+]
