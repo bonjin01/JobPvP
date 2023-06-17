@@ -1,19 +1,90 @@
 {
-    "pools": [
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "name": "minecraft:enchanted_book",
-            "functions": [
-              {
-                "function": "minecraft:enchant_randomly"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-  
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "functions": [
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:blast_protection",
+                "minecraft:fire_aspect",
+                "minecraft:fire_protection",
+                "minecraft:flame",
+                "minecraft:feather_falling",
+                "minecraft:infinity",
+                "minecraft:knockback",
+                "minecraft:multishot",
+                "minecraft:piercing",
+                "minecraft:power",
+                "minecraft:projectile_protection",
+                "minecraft:protection",
+                "minecraft:punch",
+                "minecraft:quick_charge",
+                "minecraft:sharpness",
+                "minecraft:sweeping"
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:blast_protection",
+                "minecraft:fire_aspect",
+                "minecraft:fire_protection",
+                "minecraft:flame",
+                "minecraft:feather_falling",
+                "minecraft:infinity",
+                "minecraft:knockback",
+                "minecraft:multishot",
+                "minecraft:piercing",
+                "minecraft:power",
+                "minecraft:projectile_protection",
+                "minecraft:protection",
+                "minecraft:punch",
+                "minecraft:quick_charge",
+                "minecraft:sharpness",
+                "minecraft:sweeping"
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:blast_protection",
+                "minecraft:fire_aspect",
+                "minecraft:fire_protection",
+                "minecraft:flame",
+                "minecraft:feather_falling",
+                "minecraft:infinity",
+                "minecraft:knockback",
+                "minecraft:multishot",
+                "minecraft:piercing",
+                "minecraft:power",
+                "minecraft:projectile_protection",
+                "minecraft:protection",
+                "minecraft:punch",
+                "minecraft:quick_charge",
+                "minecraft:sharpness",
+                "minecraft:sweeping"
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
