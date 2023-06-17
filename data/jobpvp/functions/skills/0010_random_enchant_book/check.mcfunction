@@ -24,7 +24,7 @@ scoreboard players reset $condition Temporary
 execute store success score $condition Temporary run clear @s book 0
 
 # クールタイム表記
-execute if score $remainct Temporary matches 0 if score $condition Temporary matches 1 run function jobpvp:skills/0010_example/
+execute if score $remainct Temporary matches 0 if score $condition Temporary matches 1 run function jobpvp:skills/0010_random_enchant_book/
 
 # 後々のために例外処理
 execute if score $remainct Temporary matches ..-1 run title @s actionbar [{"text":"このメッセージは出ないはずだよ remainct: ","color":"red"},{"score":{"name": "$remainct","objective": "Temporary"}}]
