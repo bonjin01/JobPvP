@@ -10,7 +10,7 @@
       }
     },
     "rewards": {
-      "function": "jobpvp:lib/apply_potion/"
+      "function": "jobpvp:lib/apply_potion/trigger"
     }
   }
   

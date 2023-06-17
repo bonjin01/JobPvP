@@ -27,7 +27,6 @@
 
 # 1tickで使うスコアボード
     scoreboard objectives add Temporary dummy
-    scoreboard objectives add Used_Potion dummy
 
 # library
     scoreboard objectives add ScoreToMax_Health dummy {"text":"プレイヤーをこの最大体力にする(*0.0001HP)"}

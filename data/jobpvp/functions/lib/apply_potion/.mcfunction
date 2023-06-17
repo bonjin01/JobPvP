@@ -18,8 +18,6 @@ summon area_effect_cloud ~ ~ ~ {Tags:["Potion_AEC"],Particle:"",NoGravity:1b,Rad
 data modify entity @e[tag=Potion_AEC,limit=1,sort=nearest] Effects set from storage jobpvp: lib_potion.Output.Effects[]
 
 # 最後に
-advancement revoke @s only jobpvp:consume_potion
-execute if data storage jobpvp: lib_potion{Item:"minecraft:honey_bottle"} run scoreboard players set @s Used_Potion 1
 data remove storage jobpvp: lib_potion
 scoreboard players reset $num Temporary
 scoreboard players reset $potionId Temporary
