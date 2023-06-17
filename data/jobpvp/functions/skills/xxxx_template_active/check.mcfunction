@@ -26,11 +26,15 @@ scoreboard players operation $ct_display2 Temporary = $remainct Temporary
 scoreboard players operation $ct_display1 Temporary /= #10 num
 scoreboard players operation $ct_display2 Temporary %= #10 num
 
+# スキル独自の条件を付け足したいならここで
+scoreboard players reset $condition Temporary
+
 # クールタイム表記
 execute if score $remainct Temporary matches 1.. run title @s actionbar [{"text":"クールタイム中です! 残り: ","color":"red"},{"score":{"name": "$ct_display1","objective": "Temporary"}},{"text":".","color":"red"},{"score":{"name": "$ct_display2","objective": "Temporary"}},{"text":"秒","color":"red"}]
 
 execute if score $remainct Temporary matches 0 unless score @s MP >= $reqmp Temporary run title @s actionbar [{"text":"MPが足りません! 残量: ","color":"red"},{"score":{"name": "@s","objective": "MP"}},{"text":" < ","color":"red"},{"score":{"name": "$reqmp","objective": "Temporary"}}]
-execute if score $remainct Temporary matches 0 if score @s MP >= $reqmp Temporary run function jobpvp:skills/xxxx_template_active/
+execute if score $remainct Temporary matches 0 if score @s MP >= $reqmp Temporary if score $condition Temporary matches 1 run function jobpvp:skills/xxxx_template_active/
+execute if score $remainct Temporary matches 0 if score @s MP >= $reqmp Temporary unless score $condition Temporary matches 1 run title @s actionbar {"text":"発動条件を満たしていません","color":"red"}
 
 # 後々のために例外処理
 execute if score $remainct Temporary matches ..-1 run title @s actionbar [{"text":"このメッセージは出ないはずだよ remainct: ","color":"red"},{"score":{"name": "$remainct","objective": "Temporary"}}]
