@@ -1,6 +1,7 @@
 # Multiごとに個別
 
 #
+    tellraw @a [{"text":"Hand/ReloadItem/fire:","color":"red"},{"score":{"name":"$hand","objective":"ui_temp"},"color":"red"},{"text":"/","color":"red"},{"score":{"name":"$reloaditem","objective":"ui_temp"},"color":"red"},{"text":"/","color":"red"},{"score":{"name":"$fire","objective":"ui_temp"},"color":"red"},{"text":" no_shot/power:","color":"gold"},{"score":{"name":"$no_shot","objective":"ui_temp"},"color":"gold"},{"text":"/","color":"gold"},{"score":{"name":"$power","objective":"ui_temp"},"color":"gold"}]
     execute if score $hand ui_temp matches 0 run data modify storage ui:tmw temp.this set from entity @s SelectedItem
     execute if score $hand ui_temp matches 1 run data modify storage ui:tmw temp.this set from entity @s Inventory[{Slot:-106b}]
     execute if score $reloaditem ui_temp matches 0 run data modify storage ui:gun temp3 set from storage ui:tmw temp.this.tag.tmw.bullets[0]
@@ -36,7 +37,7 @@
     scoreboard players operation $speed ui_temp = $power ui_temp
     scoreboard players operation $speed ui_temp /= $mass ui_temp
     execute if score $speed ui_temp > $barrel ui_temp run function jobpvp:guns/player/crossbow/attack/shot/over_barrel
-    #tellraw @a [{"text":"Speed:","color":"red"},{"score":{"name":"$speed","objective":"ui_temp"},"color":"red"},{"text":"/","color":"red"},{"score":{"name":"$barrel","objective":"ui_temp"},"color":"red"}]
+    tellraw @a [{"text":"Speed:","color":"red"},{"score":{"name":"$speed","objective":"ui_temp"},"color":"red"},{"text":"/","color":"red"},{"score":{"name":"$barrel","objective":"ui_temp"},"color":"red"}]
     # 弾速振幅最大値 = 弾速 x 0.2 ( 弾速 = 本来の弾速 x 1 ~ 1.2 )
     scoreboard players operation $speed.plus ui_temp = $speed ui_temp
     scoreboard players operation $speed.plus ui_temp /= #5 ui_num
