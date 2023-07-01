@@ -7,7 +7,9 @@
 # 
 
 # 効果発動
-    ##自由に効果を記述
+    data modify storage jobpvp:item_modifier data.Enchantments set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].offhand.tag.Enchantments
+    data modify storage jobpvp:item_modifier data.Enchantments merge from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Inventory[{Slot:9b}].tag.StoredEnchantments
+    item modify entity @s weapon.offhand jobpvp:apply_enchantment
 
 # MP減算
     execute store result score $temp Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:-1}].MP

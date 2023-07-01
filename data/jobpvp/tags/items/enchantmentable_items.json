@@ -1,0 +1,14 @@
+{
+    "values": [
+        "minecraft:bow",
+        "minecraft:crossbow",
+        "minecraft:shield",
+        "minecraft:elytra",
+        "#minecraft:swords",
+        "#minecraft:axes",
+        "#minecraft:pickaxes",
+        "#minecraft:shovels",
+        "#minecraft:hoes",
+        "#jobpvp:armors"
+    ]
+}
