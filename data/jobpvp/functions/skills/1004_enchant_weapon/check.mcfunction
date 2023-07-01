@@ -27,8 +27,8 @@ scoreboard players operation $ct_display1 Temporary /= #10 num
 scoreboard players operation $ct_display2 Temporary %= #10 num
 
 # スキル独自の条件を付け足したいならここで
-execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Inventory[{Slot:9b,id:"minecraft:enchanted_book"}] run tag @s add temp_condition_failed
-execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].offhand[{ItemType:"item"}] run tag @s add temp_condition_failed
+execute unless data entity @s Inventory[{Slot:9b,id:"minecraft:enchanted_book"}] run tag @s add temp_condition_failed
+execute unless data entity @s Inventory[{Slot:-106b,ItemType:"item"}] run tag @s add temp_condition_failed
 execute unless predicate jobpvp:holding_enchantmentable_item_offhand run tag @s add temp_condition_failed
 
 # クールタイム表記
