@@ -35,7 +35,7 @@
     execute if score $firetime.temp ui_temp matches 0..20 if score $firetime.mod ui_temp matches 0 at @s run function jobpvp:guns/player/crossbow/fire/id/upper/123/particle
     execute if score $firetime.temp ui_temp matches 40..139 if score $firetime.mod ui_temp matches 0 at @s rotated ~ 0 run function jobpvp:guns/player/crossbow/fire/id/upper/123/particle2
     execute if score $firetime.temp ui_temp matches 140..239 at @s run scoreboard players operation $firetime.rot ui_temp = $firetime.temp ui_temp
-    execute if score $firetime.temp ui_temp matches 140..239 at @s run scoreboard players remove $firetime.rot ui_temp 199
+    execute if score $firetime.temp ui_temp matches 140..239 at @s run scoreboard players remove $firetime.rot ui_temp 139
     execute if score $firetime.temp ui_temp matches 140..239 if score $firetime.mod ui_temp matches 0 at @s run function jobpvp:guns/player/crossbow/fire/id/upper/123/rotating
     execute if score $firetime.temp ui_temp matches 40..220 run data merge storage ui:common {input:{Mode:"create",Var:20,Num:1,Rand:{X:60,Z:60}}}
     execute if score $firetime.temp ui_temp matches 40..220 at @s rotated ~ 0 run function ui:common/particle
