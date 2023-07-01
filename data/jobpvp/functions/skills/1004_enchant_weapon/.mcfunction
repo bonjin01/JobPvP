@@ -7,8 +7,9 @@
 # 
 
 # 効果発動
-    data modify storage jobpvp:item_modifier data.Enchantments set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].offhand.tag.Enchantments
-    data modify storage jobpvp:item_modifier data.Enchantments merge from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Inventory[{Slot:9b}].tag.StoredEnchantments
+    execute if data entity @s Inventory[{Slot:-106b}].tag.Enchantments run data modify storage jobpvp:item_modifier data.Enchantments set from entity @s Inventory[{Slot:-106b}].tag.Enchantments
+    execute unless data entity @s Inventory[{Slot:-106b}].tag.Enchantments run data modify storage jobpvp:item_modifier data.Enchantments set value []
+    data modify storage jobpvp:item_modifier data.Enchantments merge from entity @s Inventory[{Slot:9b}].tag.StoredEnchantments
     item modify entity @s weapon.offhand jobpvp:apply_enchantment
 
 # MP減算
