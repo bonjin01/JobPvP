@@ -28,3 +28,5 @@
     execute if score $sound ui_temp matches -14 run function jobpvp:guns/player/crossbow/attack/shot/sound/downer/14
 # bow
     execute if score $sound ui_temp matches -15 run function jobpvp:guns/player/crossbow/attack/shot/sound/downer/15
+# WindCutter
+    execute if score $sound ui_temp matches -16 run playsound entity.evoker.cast_spell player @a ~ ~ ~ 1 1 0
