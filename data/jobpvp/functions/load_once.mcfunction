@@ -64,7 +64,7 @@
     scoreboard players set $Map Global 0
 
 # UtilityItems の使用許可を剝奪する
-    scoreboard players set $tmw.activation ui_world 0
+    scoreboard players set $tmw.activation ui_world 1
 
 #
     gamerule mobGriefing false
