@@ -1,2 +1,2 @@
-summon item ~ ~ ~ {Tags:["JobPvP_Generated_SkillItem"],PickupDelay:0,Item:{id:"minecraft:crossbow",tag:{HideFlags:32,ItemType:"skill",SkillCost:1,Charged:1b,ChargedProjectiles:[{id:"minecraft:air",Count:1b}],Itemdata:{Skill:{}}}}}
+summon item ~ ~ ~ {Tags:["JobPvP_Generated_SkillItem"],PickupDelay:0,Item:{id:"minecraft:crossbow",Count:1b,tag:{HideFlags:32,ItemType:"skill",SkillCost:1,Charged:1b,ChargedProjectiles:[{id:"minecraft:air",Count:1b}],Itemdata:{Skill:{}}}}}
 data modify entity @e[tag=JobPvP_Generated_SkillItem,limit=1] Item.tag.Itemdata.Skill set from storage jobpvp: debug.skilldata
