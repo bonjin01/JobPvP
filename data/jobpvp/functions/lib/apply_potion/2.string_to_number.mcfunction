@@ -5,10 +5,8 @@
 data modify storage jobpvp: lib_potion.temp.tempEffect set from storage jobpvp: lib_potion.Potion.Effects[0]
 
 # "minecraft:"プレフィックスは消す
-data modify storage jobpvp: lib_potion.temp.id set string storage jobpvp: lib_potion.temp.tempEffect.Id 0 10
-data modify storage jobpvp: lib_potion.temp.string set value "minecraft:"
-execute store success score $success Temporary run data modify storage jobpvp: lib_potion.temp.string set from storage jobpvp: lib_potion.temp.id
-execute if score $success Temporary matches 0 run data modify storage jobpvp: lib_potion.tempEffect.Id set string storage jobpvp: lib_potion.temp.tempEffect.Id 10
+execute store result score $string_length Temporary run data get storage jobpvp: lib_potion.Potion.Effects[0].Id
+execute if score $string_length Temporary matches 10.. run function jobpvp:lib/apply_potion/3.remove_prefix
 
 # 置き換え
 execute if data storage jobpvp: lib_potion.temp.tempEffect{Id:"speed"} run scoreboard players set $potionId Temporary 1
@@ -45,5 +43,5 @@ execute if data storage jobpvp: lib_potion.temp.tempEffect{Id:"bad_omen"} run sc
 execute if data storage jobpvp: lib_potion.temp.tempEffect{Id:"hero_of_the_village"} run scoreboard players set $potionId Temporary 32
 execute if data storage jobpvp: lib_potion.temp.tempEffect{Id:"darkness"} run scoreboard players set $potionId Temporary 33
 
-# データを削除
-data remove storage jobpvp: lib_potion.temp
+# リセット
+scoreboard players reset $string_length Temporary
