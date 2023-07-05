@@ -14,8 +14,9 @@ execute store result score $num Temporary run data get storage jobpvp: lib_potio
 execute if score $num Temporary matches 1.. run function jobpvp:lib/apply_potion/1.burn
 
 # 召喚
-summon area_effect_cloud ~ ~ ~ {Tags:["Potion_AEC"],Particle:"",NoGravity:1b,Radius:0.0f,Age:4,Duration:6,WaitTime:0,Effects:[]}
-data modify entity @e[tag=Potion_AEC,limit=1,sort=nearest] Effects set from storage jobpvp: lib_potion.Output.Effects[]
+summon area_effect_cloud ~ ~ ~ {Tags:["Potion_AEC","temp_unpower"],Particle:"",NoGravity:1b,Radius:0.0f,Age:4,Duration:6,WaitTime:0,Effects:[]}
+data modify entity @e[tag=Potion_AEC,tag=temp_unpower,limit=1,sort=nearest] Effects set from storage jobpvp: lib_potion.Output.Effects[]
+tag @e[tag=temp_unpower] remove temp_unpower
 
 # 最後に
 data remove storage jobpvp: lib_potion
