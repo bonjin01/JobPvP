@@ -2,8 +2,11 @@
 
 # 数値IDでなかったら数値に変換
 scoreboard players reset $potionId Temporary
-function jobpvp:lib/apply_potion/2.string_to_number
-execute unless score $potionId Temporary matches 1.. store result score $potionId Temporary run data get storage jobpvp: lib_potion.Potion.Effects[0].Id
+data modify storage jobpvp: _ set value [[""],[0]]
+data modify storage jobpvp: _[] append from storage jobpvp: lib_potion.Potion.Effects[0].Id
+execute if data storage jobpvp: _[0][1] run function jobpvp:lib/apply_potion/2.string_to_number
+execute if data storage jobpvp: _[1][1] store result score $potionId Temporary run data get storage jobpvp: lib_potion.Potion.Effects[0].Id
+data remove storage jobpvp: _
 
 # 適応
 data modify storage jobpvp: lib_potion.temp.Effect set from storage jobpvp: lib_potion.Potion.Effects[0]
