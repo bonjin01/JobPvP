@@ -1,4 +1,4 @@
-#> jobpvp:skills/0000_example/check
+#> jobpvp:skills/0020_magic_boost/check
 #
 # スキルを発動したときのファンクション
 #

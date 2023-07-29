@@ -1,4 +1,4 @@
-#> jobpvp:skills/0000_example/check
+#> jobpvp:skills/0021_magic_ward/check
 #
 # スキルを発動したときのファンクション
 #

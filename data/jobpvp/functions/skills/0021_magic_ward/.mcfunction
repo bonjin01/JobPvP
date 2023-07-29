@@ -1,4 +1,4 @@
-#> jobpvp:skills/0020_magic_boost/
+#> jobpvp:skills/0021_magic_ward/
 #
 # スキルを発動したときのファンクション
 #
