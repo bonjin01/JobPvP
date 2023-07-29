@@ -12,10 +12,10 @@
 
 # CT適応
     execute store result score $nowgametime Temporary run time query gametime
-    execute store result score $CT Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:0}].CT
+    execute store result score $CT Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:20}].CT
     #scoreboard players operation $CT Temporary += $nowgametime Temporary
     scoreboard players set $CT Temporary 2147483647
-    execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:0}].CTGametime int 1 run scoreboard players get $CT Temporary
+    execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:20}].CTGametime int 1 run scoreboard players get $CT Temporary
     scoreboard players reset $nowgametime Temporary
     scoreboard players reset $CT Temporary
 
