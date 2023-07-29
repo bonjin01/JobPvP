@@ -15,11 +15,11 @@
 
 # CT適応
     execute store result score $nowgametime Temporary run time query gametime
-    execute store result score $CT Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:0}].CT
+    execute store result score $CT Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:21}].CT
     #割り込み
     execute if score @s MP matches 5.. if entity @s[nbt={HurtTime:9s}] run scoreboard players add $CT Temporary 49
     scoreboard players operation $CT Temporary += $nowgametime Temporary
-    execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:0}].CTGametime int 1 run scoreboard players get $CT Temporary
+    execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:21}].CTGametime int 1 run scoreboard players get $CT Temporary
     scoreboard players reset $nowgametime Temporary
     scoreboard players reset $CT Temporary
 
