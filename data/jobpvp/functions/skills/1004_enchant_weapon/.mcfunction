@@ -9,8 +9,10 @@
 # 効果発動
     execute if data entity @s Inventory[{Slot:-106b}].tag.Enchantments run data modify storage jobpvp:item_modifier data.Enchantments set from entity @s Inventory[{Slot:-106b}].tag.Enchantments
     execute unless data entity @s Inventory[{Slot:-106b}].tag.Enchantments run data modify storage jobpvp:item_modifier data.Enchantments set value []
-    data modify storage jobpvp:item_modifier data.Enchantments merge from entity @s Inventory[{Slot:9b}].tag.StoredEnchantments
+    data modify storage jobpvp:item_modifier data.Enchantments append from entity @s Inventory[{Slot:9b}].tag.StoredEnchantments[]
     item modify entity @s weapon.offhand jobpvp:apply_enchantment
+    playsound minecraft:block.enchantment_table.use player @a ~ ~ ~ 1 1 0
+    particle minecraft:enchant ~ ~1 ~ 0.1 0.1 0.1 1 12 normal
 
 # MP減算
     execute store result score $temp Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:-1}].MP
