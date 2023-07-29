@@ -5,6 +5,8 @@
 # 効果発動
     clear @s book 1
     loot give @s loot jobpvp:jobpvp/random_enchant_book
+    playsound minecraft:block.enchantment_table.use player @a ~ ~ ~ 1 1 0
+    particle minecraft:enchant ~ ~1 ~ 0.1 0.1 0.1 1 12 normal
 
 # CT適応
     execute store result score $nowgametime Temporary run time query gametime

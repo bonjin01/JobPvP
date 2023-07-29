@@ -19,6 +19,7 @@
     execute if score $random Temporary matches 5 run data modify entity @e[tag=init,limit=1] Item.tag.CustomPotionEffects[0].Id set value 33
     execute as @e[tag=init] positioned 0.0 0.0 0.0 run function jobpvp:skills/1013_debuff/launch
     scoreboard players reset $random Temporary
+    playsound minecraft:entity.snowball.throw player @s ~ ~ ~ 1 0.5 0
 
 # MP減算
     execute store result score $temp Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Skills[{Id:1013}].MP
