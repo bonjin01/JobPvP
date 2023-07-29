@@ -27,13 +27,12 @@ scoreboard players operation $ct_display1 Temporary /= #10 num
 scoreboard players operation $ct_display2 Temporary %= #10 num
 
 # スキル独自の条件を付け足したいならここで
-execute if score $GameTimer Global matches 1201.. run tag @s add temp_condition_failed
 
 # クールタイム表記
 execute if score $remainct Temporary matches 1.. run title @s actionbar [{"text":"クールタイム中です! 残り: ","color":"red"},{"score":{"name": "$ct_display1","objective": "Temporary"}},{"text":".","color":"red"},{"score":{"name": "$ct_display2","objective": "Temporary"}},{"text":"秒","color":"red"}]
 
 execute if score $remainct Temporary matches 0 unless score @s MP >= $reqmp Temporary run title @s actionbar [{"text":"MPが足りません! 残量: ","color":"red"},{"score":{"name": "@s","objective": "MP"}},{"text":" < ","color":"red"},{"score":{"name": "$reqmp","objective": "Temporary"}}]
-execute if score $remainct Temporary matches 0 if score @s MP >= $reqmp Temporary if entity @s[tag=!temp_condition_failed] run function jobpvp:skills/1023_fullenchant/
+execute if score $remainct Temporary matches 0 if score @s MP >= $reqmp Temporary if entity @s[tag=!temp_condition_failed] run function jobpvp:skills/1013_debuff/
 execute if score $remainct Temporary matches 0 if score @s MP >= $reqmp Temporary if entity @s[tag=temp_condition_failed] run title @s actionbar {"text":"発動条件を満たしていません","color":"red"}
 
 # 後々のために例外処理
