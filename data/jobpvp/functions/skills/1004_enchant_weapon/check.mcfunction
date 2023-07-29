@@ -34,8 +34,8 @@ execute unless predicate jobpvp:holding_enchantmentable_item_offhand run tag @s 
 # クールタイム表記
 execute if score $remainct Temporary matches 1.. run title @s actionbar [{"text":"クールタイム中です! 残り: ","color":"red"},{"score":{"name": "$ct_display1","objective": "Temporary"}},{"text":".","color":"red"},{"score":{"name": "$ct_display2","objective": "Temporary"}},{"text":"秒","color":"red"}]
 
-execute if score $remainct Temporary matches 0 unless score @s MP >= $reqmp Temporary run title @s actionbar [{"text":"MPが足りません! 残量: ","color":"red"},{"score":{"name": "@s","objective": "MP"}},{"text":" < ","color":"red"},{"score":{"name": "$reqmp","objective": "Temporary"}}]
-execute if score $remainct Temporary matches 0 if score @s MP >= $reqmp Temporary if entity @s[tag=!temp_condition_failed] run function jobpvp:skills/xxxx_template_active/
+execute if score $remainct Temporary matches 0 unless score @s MP >= $reqmp Temporary run title @s actionbar [{"text":"MPが足りません! 残量: ","color":"red"},{"score":{"name": "jobpvp:skills/xxxx_template_active/@s","objective": "MP"}},{"text":" < ","color":"red"},{"score":{"name": "$reqmp","objective": "Temporary"}}]
+execute if score $remainct Temporary matches 0 if score @s MP >= $reqmp Temporary if entity @s[tag=!temp_condition_failed] run function jobpvp:skills/1004_enchant_weapon/
 execute if score $remainct Temporary matches 0 if score @s MP >= $reqmp Temporary if entity @s[tag=temp_condition_failed] run title @s actionbar {"text":"発動条件を満たしていません","color":"red"}
 
 # 後々のために例外処理
