@@ -18,8 +18,10 @@
     #data modify storage jobpvp: armor set value 
 # 移動速度の増減
     #data modify storage jobpvp: movement_speed set value 
+     data modify storage jobpvp: movement_speed set value 0.05
 # 最大体力の増減
     #data modify storage jobpvp: max_health set value 
+     data modify storage jobpvp: max_health set value -5
 # ノックバック耐性の増減
     #data modify storage jobpvp: knockback_resistance set value 
-    data modify storage jobpvp: attack_damage set value 30
+    
